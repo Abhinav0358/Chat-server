@@ -1,6 +1,3 @@
-import eventlet 
-eventlet.monkey_patch()
-
 from flask import Flask, render_template
 from flask_socketio import SocketIO, emit
 from flask import request
@@ -8,7 +5,7 @@ from flask import request
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'secret!'
 
-socketio = SocketIO(app, cors_allowed_origins="*", async_mode='eventlet')
+socketio = SocketIO(app, cors_allowed_origins="*", async_mode='threading')
 users = []
 
 @app.route('/')
