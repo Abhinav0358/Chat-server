@@ -1,4 +1,4 @@
-const socket = io("http://localhost:5000");
+const socket = io("https://chat-server-abhinav.onrender.com/chat");
 let users = [];
 const usernameColors = [
   "#e74c3c", // Red
