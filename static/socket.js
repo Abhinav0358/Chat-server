@@ -85,7 +85,7 @@ function enterChat() {
     window.location.href = '/chat';
 }
 window.onload=()=>{
-    if(document.getElementById('username')){
+    if(window.location.pathname == '/chat'){
         document.getElementById('username').textContent=`Welcome, ${sessionStorage.getItem("username")}`
         socket.emit("enter",
             sessionStorage.getItem("username")
