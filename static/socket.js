@@ -1,4 +1,6 @@
-const socket = io("https://chat-server-abhinav.onrender.com");
+const socket = io("https://chat-server-abhinav.onrender.com", {
+  transports: ["polling"]
+});
 let users = [];
 const usernameColors = [
   "#e74c3c", // Red
